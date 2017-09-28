@@ -2,11 +2,11 @@ Sub Main
 	Debug.Clear
 	template_path = "\Path\to\template\_Template.grt"
 	file_path = "\Path\to\Files\"
-    ' list of filenames
-    ' with `_` you start  a new line in array for readability
+	' list of filenames
+	' with `_` you start  a new line in array for readability
 	filename_list = Array("[filename_1]", "[filename_2]", _
-    ..., _
-    "[filename_n]" 
+	..., _
+	"[filename_n]" 
 	)
 
 	'Create Grapher as an Object
