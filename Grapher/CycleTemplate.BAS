@@ -1,4 +1,7 @@
 Sub Main
+	' Load numerous inputfiles into a Grapher template
+	' save plot as *.grf file and export plots as *.jpg image 
+	' 
 	Debug.Clear
 	template_path = "\Path\to\template\_Template.grt"
 	file_path = "\Path\to\Files\"
@@ -32,7 +35,7 @@ Sub Main
 		_Templategrt.Shapes.SelectAll
 
 		'Export as image file
-		_.Export2(full_path + ".jpg",True,"ColorDepth=24;ColorReductionMethod=5;ExportImageFormatBGR24=1;HDPI=300;Height=260;KeepAspect=1;KeepPixelSize=0;Quality=100;Update_ColorDepth=24;Update_ColorReductionMethod=5;Update_Height=260;Update_Width=1092;VDPI=300;Width=1092",True,"jpg")
+		_Templategrt.Export2(full_path + ".jpg",True,"ColorDepth=24;ColorReductionMethod=5;ExportImageFormatBGR24=1;HDPI=300;Height=260;KeepAspect=1;KeepPixelSize=0;Quality=100;Update_ColorDepth=24;Update_ColorReductionMethod=5;Update_Height=260;Update_Width=1092;VDPI=300;Width=1092",True,"jpg")
 
 		
 		' close file.
