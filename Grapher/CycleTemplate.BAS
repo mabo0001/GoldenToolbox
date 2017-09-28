@@ -3,7 +3,7 @@ Sub Main
 	template_path = "\Path\to\template\_Template.grt"
 	file_path = "\Path\to\Files\"
 	' list of filenames
-	' with `_` you start  a new line in array for readability
+	' linebreak in array `_` for readability
 	filename_list = Array("[filename_1]", "[filename_2]", _
 	..., _
 	"[filename_n]" 
