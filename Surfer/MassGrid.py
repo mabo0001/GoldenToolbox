@@ -19,7 +19,7 @@ fail_list = []
 for infile in glob.glob(inpath + "*" + file_format):
     outfile = infile.replace(file_format, ".grd")
     try:
-        app.GridData(DataFile=infile, Algorithm="srfKriging", ShowReport=False, OutGrid=outfile)
+        app.GridData3(DataFile=infile, Algorithm="srfKriging", ShowReport=False, OutGrid=outfile, xSize=1,ySize=1)
         pass
     except:
         fail_list.append(infile)
