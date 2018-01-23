@@ -26,10 +26,10 @@ Sub Main
 		_Plot.Selection.DeselectAll
 		'Select all objects
 		_Plot.Shapes.SelectAll
-	     _Plot.Export2(out_path, True,"ColorDepth=24;ColorReductionMethod=5;ExportImageFormatBGR24=1;HDPI=300;Height=1019;KeepAspect=1;KeepPixelSize=0;Quality=100;VDPI=300;Width=4227",True,"jpg")
+	    _Plot.Export2(out_path, True,"ColorDepth=24;ColorReductionMethod=5;ExportImageFormatBGR24=1;HDPI=300;Height=1019;KeepAspect=1;KeepPixelSize=0;Quality=100;VDPI=300;Width=4227",True,"jpg")
 		' close file.
 		_Plot.Windows(1).Close(grfSaveChangesNo)
-			file = Dir$()
-		Wend
+		file = Dir$()
+	Wend
 	Grapher.Quit
 End Sub
