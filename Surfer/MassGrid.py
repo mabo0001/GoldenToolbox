@@ -5,9 +5,11 @@
 # same directory.
 #
 import win32com.client
+import glob
 
 # input information
 inpath = "C:\\Program Files\\Golden Software\\Surfer 13\\Samples\\"
+identifier = "*"
 file_format = ".dat"
 
 # get a sufer instance
@@ -16,19 +18,18 @@ app.Visible = True
 
 fail_list = []
 
-for infile in glob.glob(inpath + "*" + file_format):
+for infile in glob.glob(inpath + identifier + file_format):
     outfile = infile.replace(file_format, ".grd")
     try:
-        app.GridData3(DataFile=infile, Algorithm="srfKriging", ShowReport=False, OutGrid=outfile, xSize=1,ySize=1)
-        pass
+        app.GridData3(DataFile=infile, xCol=1, yCol=2, zCol=3, Algorithm="srfKriging", ShowReport=False, OutGrid=outfile, xSize=1,ySize=1)
     except:
         fail_list.append(infile)
 
-app.quit
+app.Quit
 
 if len(fail_list) == 0:
     print("### all files gridded ###")
 else: 
     for fail in fail_list:
         outstr = fail + "\n"
-    print("### most files gridded, following files failed: \n" + outstr)
+        print("### most files gridded, following files failed: \n" + outstr)
